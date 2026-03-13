@@ -504,9 +504,40 @@ main {
   line-height: 1.6;
 }
 
+.about-text strong {
+  font-weight: var(--fw-600);
+  color: var(--white-2);
+}
+
+.about-text a {
+  display: inline; /* Overrides the 'display: block' you have for <a> tags globally */
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+  color: var(--vegas-gold);
+}
+
 .about-text p { margin-bottom: 15px; }
 
+.audio-btn {
+  display: inline-block !important; /* Forces it to stay on the same line */
+  width: auto !important;
+  height: auto !important;
+  padding: 0;
+  margin: 4px 0 0 0;
+  color: var(--orange-yellow-crayola);
+  vertical-align: middle;
+  cursor: pointer;
+}
 
+/* Ensure the icon inside doesn't jump to a new line either */
+.audio-btn ion-icon {
+  display: inline-block !important; 
+  pointer-events: none; /* Makes the click go through to the button */
+}
 
 /**
  * #service 
@@ -745,17 +776,31 @@ main {
 
 .clients-item {
   min-width: 50%;
+  max-width: 50%;
   scroll-snap-align: start;
 }
 
 .clients-item img {
-  width: 100%;
-  filter: grayscale(1);
+  width: 50%;
   transition: var(--transition-1);
+  margin: 0 auto;
 }
 
 .clients-item img:hover { filter: grayscale(0); }
 
+.client-name {
+  color: var(--light-gray);
+  font-size: var(--fs-7); /* Small, clean text */
+  font-weight: var(--fw-400);
+  text-align: center;
+  margin-top: 10px;
+  transition: var(--transition-1);
+}
+
+/* Make the name turn gold when you hover over the logo */
+.clients-item a:hover .client-name {
+  color: var(--orange-yellow-crayola);
+}
 
 
 
