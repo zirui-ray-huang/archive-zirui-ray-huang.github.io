@@ -150,19 +150,16 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link="about">About</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link="portfolio">Portfolio</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Off Duty</button>
+            <button class="navbar-link" data-nav-link="off duty">Off Duty</button>
           </li>
 
         </ul>
@@ -676,81 +673,27 @@
 
         <section class="projects">
 
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item active" data-filter-item data-category="web development">
               <a href="#">
+                <button class="project-link-btn" data-nav-link="nyc-taxi" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; width: 100%;">
+                  
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/nyc-taxi.png" alt="NYC Taxi" loading="lazy">
+                  </figure>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  <h3 class="project-title">NYC Taxi Insights</h3>
+                  <p class="project-category">A Full-Stack Approach to Scalable Data Transformation</p>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
+                </button>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item active" data-filter-item data-category="web development">
               <a href="#">
 
                 <figure class="project-img">
@@ -896,6 +839,136 @@
 
           </ul>
 
+        </section>
+
+      </article>
+
+      <article class="project-details" data-page="nyc-taxi">
+        <header>
+          <div class="back-btn-container" style="margin-bottom: 20px;">
+            <button class="navbar-link" data-nav-link="portfolio" style="background: none; border: none; color: var(--orange-yellow-crayola); cursor: pointer; display: flex; align-items: center; gap: 5px;">
+              <ion-icon name="arrow-back-outline"></ion-icon> Back to Portfolio
+            </button>
+          </div>
+          <h2 class="h2 article-title">NYC Taxi Insights</h2>
+        </header>
+
+        <section class="about-text">
+          <figure class="project-img" style="border-radius: 16px; overflow: hidden; margin-bottom: 30px;">
+            <img src="./assets/images/nyc-taxi-2.png" alt="NYC Taxi project">
+          </figure>
+
+          <h3 class="h3" style="margin-bottom: 15px;">Project Overview</h3>
+          <p>
+            I built a production-grade data ecosystem to transform millions of raw <a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page" target="_blank"> NYC Taxi (TLC) </a>records into a scalable analytics platform. 
+            This project implements a full-lifecycle <strong>ELT pipeline</strong>, from automated ingestion 
+            and <strong>Medallion-style</strong> transformations to executive <strong>BI insights</strong> and an <strong>AI-integrated</strong> semantic layer for natural language querying.
+          </p>
+
+          <div class="project-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 25px 0;">
+    
+            <a href="https://zirui-ray-huang.github.io/nyc_taxi_ds/" target="_blank" class="service-item" style="padding: 20px; text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; border: 1px solid var(--jet); border-radius: 14px;">
+              <div class="service-icon-box" style="margin: 0;">
+                <ion-icon name="bar-chart-outline" style="font-size: 25px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="margin-bottom: 0;">BI Dashboard</h4>
+                <p class="service-item-text" style="font-size: 12px;">Evidence.dev Analytics</p>
+              </div>
+            </a>
+
+            <a href="https://nyc-taxi-ray-huang.streamlit.app/" target="_blank" class="service-item" style="padding: 20px; text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; border: 1px solid var(--jet); border-radius: 14px;">
+              <div class="service-icon-box" style="margin: 0;">
+                <ion-icon name="chatbubbles-outline" style="font-size: 25px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="margin-bottom: 0;">AI Chatbot</h4>
+                <p class="service-item-text" style="font-size: 12px;">MCP Semantic Layer</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/zirui-ray-huang/nyc_taxi_ds" target="_blank" class="service-item" style="padding: 20px; text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; border: 1px solid var(--jet); border-radius: 14px;">
+              <div class="service-icon-box" style="margin: 0;">
+                <ion-icon name="logo-github" style="font-size: 25px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="margin-bottom: 0;">GitHub Repo</h4>
+                <p class="service-item-text" style="font-size: 12px;">Source Code & Docs</p>
+              </div>
+            </a>
+
+          </div>
+
+          <p>
+            The core mission was to bridge the gap between complex engineering and business operations. By implementing a <strong>semantic layer</strong> via an <strong>MCP Server</strong>, 
+            It enabled non-technical stakeholders to "chat" with their data—asking complex questions and receiving real-time answers without ever writing a line of SQL or code.
+          </p>
+
+          <h3 class="h3" style="margin-top: 30px; margin-bottom: 20px;">The Tech Stack</h3>
+          
+          <ul class="service-list" style="grid-template-columns: 1fr; gap: 15px;">
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Orchestration</h4>
+                <p class="service-item-text"><strong>Dagster</strong> for end-to-end pipeline visibility.</p>
+              </div>
+              <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                <img src="./assets/images/icon-dagster.svg" alt="Dagster" width="80">
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Ingestion</h4>
+                <p class="service-item-text"><strong>dlt (data load tool)</strong> for "Pythonic" extraction and loading.</p>
+              </div>
+              <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                <img src="./assets/images/icon-dlt.png" alt="dlt" width="80">
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Transformation</h4>
+                <p class="service-item-text"><strong>dbt + MotherDuck/DuckDB</strong> to power a Bronze-Silver-Gold Medallion architecture.</p>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-dbt.png" alt="dbt" width="80">
+                  </div>
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-duckdb.png" alt="DuckDB" width="80">
+                  </div>
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI Integration</h4>
+                <p class="service-item-text"><strong>MCP Server</strong> to enable LLMs to query the data warehouse directly.</p>
+              </div>
+              <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                <img src="./assets/images/icon-mcp.png" alt="MCP" width="80">
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Consumption</h4>
+                <p class="service-item-text"><strong>Evidence</strong> for BI-as-code and <strong>Streamlit</strong> for interactive data apps.</p>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-streamlit.png" alt="Streamlit" width="80">
+                  </div>
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-evidence.png" alt="Evidence" width="80">
+                  </div>
+              </div>
+            </li>
+
+          </ul>
         </section>
 
       </article>

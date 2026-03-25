@@ -140,18 +140,33 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+// Add event to all nav links (including projects and back buttons)
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    // 1. Determine which page we want to go to
+    // Priority: data-nav-link attribute > innerHTML text
+    const clickedPage = this.getAttribute("data-nav-link") || this.innerHTML.toLowerCase().trim();
+
+    // 2. Loop through all pages to show the right one
+    for (let j = 0; j < pages.length; j++) {
+      if (clickedPage === pages[j].dataset.page) {
+        pages[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+      }
+    }
+
+    // 3. Update the Navbar highlight (only for main navigation items)
+    for (let k = 0; k < navigationLinks.length; k++) {
+      // Check if this link's destination matches the active page
+      const linkDestination = navigationLinks[k].getAttribute("data-nav-link") || navigationLinks[k].innerHTML.toLowerCase().trim();
+      
+      if (clickedPage === linkDestination) {
+        navigationLinks[k].classList.add("active");
+      } else {
+        navigationLinks[k].classList.remove("active");
       }
     }
 
