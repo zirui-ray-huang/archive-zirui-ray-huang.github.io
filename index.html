@@ -711,6 +711,24 @@
               </a>
             </li>
 
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <button class="project-link-btn" data-nav-link="sign-reader" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; width: 100%;">
+                  
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/sign-reader.png" alt="AI Sign Reader & CDS Integration" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">AI Sign Reader & CDS Integration</h3>
+                  <p class="project-category">Computer Vision Pipeline for Standardized Curb Regulations</p>
+
+                </button>
+              </a>
+            </li>
+
           </ul>
 
         </section>
@@ -938,6 +956,105 @@
                   </div>
                   <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
                     <img src="./assets/images/icon-folium.png" alt="Folium" width="40">
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+      <article class="project-details" data-page="sign-reader">
+        <header>
+          <div class="back-btn-container" style="margin-bottom: 20px;">
+            <button class="navbar-link" data-nav-link="portfolio" style="background: none; border: none; color: var(--orange-yellow-crayola); cursor: pointer; display: flex; align-items: center; gap: 5px;">
+              <ion-icon name="arrow-back-outline"></ion-icon> Back to Portfolio
+            </button>
+          </div>
+          <h2 class="h2 article-title">AI Sign Reader & CDS Integration</h2>
+        </header>
+
+        <section class="about-text">
+          <figure class="project-img" style="border-radius: 16px; overflow: hidden; margin-bottom: 30px;">
+            <img src="./assets/images/sign-reader-2.png" alt="AI Sign Reader & CDS Integration">
+          </figure>
+
+          <h3 class="h3" style="margin-bottom: 15px;">Project Overview</h3>
+          <p>
+            Managing the "curb" is one of the most data-intensive challenges in modern urban mobility. At my current firm, I engineered an automated <strong>Computer Vision Pipeline</strong> that transforms raw Street View imagery into machine-readable parking regulations, fully compliant with the <a href="https://github.com/openmobilityfoundation/curb-data-specification" target="_blank">Curb Data Specification (CDS)</a>.
+          </p>
+
+          <p>
+            By utilizing <strong>Gemini</strong> as the multimodal intelligence engine, I bypassed traditional OCR limitations to interpret complex, overlapping parking signs in varying environmental conditions. To bridge the gap between LLM creativity and database reliability, I implemented a <strong>Pydantic-enforced Semantic Layer</strong>, ensuring that every extracted regulation strictly adheres to the CDS nested JSON schema.
+          </p>
+
+          <h3 class="h3" style="margin-top: 30px; margin-bottom: 20px;">Multimodal Extraction Example</h3>
+          <p style="margin-bottom: 20px;">
+            To ensure regulatory compliance, the pipeline must translate visual cues (colors, arrows, time-windows) into strict <strong>Curb Data Specification (CDS)</strong> attributes. Below is an example of the agent identifying a multi-regulation sign:
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+            
+            <figure class="project-img" style="border-radius: 12px; border: 1px solid var(--jet); overflow: hidden; margin: 0;">
+              <div style="background: var(--jet); padding: 8px 15px; font-size: 11px; color: var(--orange-yellow-crayola); text-transform: uppercase;">Raw Street View Input</div>
+              <img src="./assets/images/sign-reader-4.png" alt="Raw parking sign image from street view" style="width: 100%; height: auto; display: block;">
+            </figure>
+
+            <figure class="project-img" style="border-radius: 12px; border: 1px solid var(--jet); overflow: hidden; margin: 0;">
+              <div style="background: var(--jet); padding: 8px 15px; font-size: 11px; color: var(--orange-yellow-crayola); text-transform: uppercase;">AI-Extracted Regulations</div>
+              <img src="./assets/images/sign-reader-3.png" alt="Screenshot of extracted CDS JSON format" style="width: 100%; height: auto; display: block;">
+            </figure>
+
+          </div>
+
+          <figure class="project-img" style="border-radius: 12px; border: 1px solid var(--jet); overflow: hidden; margin-bottom: 30px;">
+            <figcaption style="padding: 15px; font-size: 13px; background: var(--jet); color: var(--light-gray-70); line-height: 1.6;">
+              <strong>From Pixels to Policy:</strong> Gemini interprets the sign's logic, the <strong>Pydantic layer</strong> then maps these to the CDS format, ensuring the final output is ready for the urban management database.
+            </figcaption>
+          </figure>
+
+          <h3 class="h3" style="margin-top: 30px; margin-bottom: 20px;">The Tech Stack</h3>
+          
+          <ul class="service-list" style="grid-template-columns: 1fr; gap: 15px;">
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Intelligence & Extraction</h4>
+                <p class="service-item-text"><strong>Gemini</strong> for multimodal sign interpretation and <strong>Pydantic</strong> for enforcing strict Curb Data Specification (CDS) schemas.</p>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-gemini.png" alt="Gemini" width="80">
+                  </div>
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-pydantic.ico" alt="Pydantic" width="80">
+                  </div>
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Infrastructure</h4>
+                <p class="service-item-text"><strong>Google Cloud Storage (GCS)</strong> for scalable raw image hosting and <strong>PostgreSQL</strong> for querying extracted regulatory metadata.</p>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-gcp.svg" alt="GCP" width="80">
+                  </div>
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-postgres.svg" alt="PostgreSQL" width="80">
+                  </div>
+              </div>
+            </li>
+
+            <li class="service-item" style="padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">QAQC & Monitoring</h4>
+                <p class="service-item-text"><strong>Streamlit</strong> internal dashboard for human-in-the-loop verification, accuracy scoring, and rapid prompt iteration.</p>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                  <div class="service-icon-box" style="margin-bottom: 0; flex-shrink: 0;">
+                    <img src="./assets/images/icon-streamlit.png" alt="Streamlit" width="80">
                   </div>
               </div>
             </li>
